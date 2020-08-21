@@ -15,7 +15,7 @@ import org.kodein.di.generic.singleton
 
 class FirebaseApplication : Application(), KodeinAware{
 
-    override val kodein = Kodein.lazy  {
+    override val kodein = Kodein.lazy {
         import(androidXModule(this@FirebaseApplication))
 
         bind() from singleton { FirebaseSource() }
